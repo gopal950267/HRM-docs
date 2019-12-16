@@ -1,0 +1,59 @@
+
+
+
+public class PIMTest
+{
+	String bpath="http://apps.qaplanet.in/qahrm/login.php";
+	WebDriver bo;
+	//to click on login button
+    @BeforeMethod
+	public void login() throws InterruptedException
+    {
+    	System.setProperty("webdriver.chrome.driver","C:\\Users\\QA6\\Downloads\\Gjar\\chromedriver.exe");
+		bo= new ChromeDriver();
+		bo.get(bpath);
+		bo.manage().window().maximize();
+		bo.findElement(By.xpath("//input[@name='txtUserName']")).sendKeys("qaplanet1");
+		Thread.sleep(3000);
+		bo.findElement(By.xpath("//input[@name='txtPassword']")).sendKeys("lab1");
+		Thread.sleep(3000);
+		bo.findElement(By.xpath("//input[@name='Submit']")).click();
+		Assert.assertEquals(bo.getTitle(),"OrangeHRM");
+		 bo.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	}
+    @AfterMethod
+    public void close()
+    {
+    	bo.close();
+    }
+
+//verify functionality of 'PIM' link
+//PIM=Employee List
+@Test(enabled=true, priority=1, groups="admin")
+public void Tc3_1() throws InterruptedException
+{
+ Actions acr=new Actions(bo);
+ acr.moveToElement(bo.findElement(By.xpath("//span[@class='drop current']"))).perform();
+ Thread.sleep(3000);
+ acr.moveToElement(bo.findElement(By.xpath("//span[contains(text(),'Employee List')]"))).perform();
+ Thread.sleep(3000);
+ bo.findElement(By.xpath("//span[contains(text(),'Employee List')]")).click(); 
+ Thread.sleep(3000);
+ Assert.assertEquals(bo.getTitle(),"OrangeHRM");
+ bo.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+}
+//PIM=Employee List
+@Test(enabled=true, priority=1, groups="admin")
+public void Tc3_2() throws InterruptedException
+{
+Actions acr=new Actions(bo);
+acr.moveToElement(bo.findElement(By.xpath("//span[@class='drop current']"))).perform();
+Thread.sleep(3000);
+acr.moveToElement(bo.findElement(By.xpath("//span[contains(text(),'Add Employee')]"))).perform();
+Thread.sleep(3000);
+bo.findElement(By.xpath("//span[contains(text(),'Add Employee')]")).click(); 
+Thread.sleep(3000);
+Assert.assertEquals(bo.getTitle(),"OrangeHRM");
+bo.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+}
+}
