@@ -37,6 +37,7 @@ public class Rightclick
    WebElement elementOpen = driver.findElement(By.xpath(".//div[@id='rightclickItem']/div[1]"));
    elementOpen.click(); 
    
+   
    Thread.sleep(3000);
    
    driver.switchTo().alert().accept();
