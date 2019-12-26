@@ -57,7 +57,8 @@ public class Dropdwon {
 			 // Printing the stored value
 			 System.out.println(sValue);
 			 // Putting a check on each option that if any of the option is equal to 'Africa" then select it 
-			 if(sValue.equals("Africa")){
+			 if(sValue.equals("Africa"))
+			 {
 			 oSelect.selectByIndex(i);
 			 break;
 			 }
