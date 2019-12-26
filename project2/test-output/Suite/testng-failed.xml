@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="firefoxbrowser(failed)" parallel="tests">
+    <parameter name="browser" value="ff"/>
+    <classes>
+      <class name="package1.CBtest">
+        <methods>
+          <include name="Tc1_1"/>
+          <include name="Tc1_2"/>
+          <include name="Crb"/>
+        </methods>
+      </class> <!-- package1.CBtest -->
+    </classes>
+  </test> <!-- firefoxbrowser(failed) -->
+</suite> <!-- Failed suite [Suite] -->
