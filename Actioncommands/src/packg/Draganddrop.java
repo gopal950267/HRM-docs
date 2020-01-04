@@ -16,7 +16,7 @@ public class Draganddrop {
 	    bo.get("http://demo.guru99.com/test/drag_drop.html");					
 	    
 		//Element which needs to drag.    		
-	    	WebElement From=bo.findElement(By.xpath("//a[contains(text(),'BANK')]"));	
+	     WebElement From=bo.findElement(By.xpath("//a[contains(text(),'BANK')]"));	
 	     
 	     //Element on which need to drop.		
 	     WebElement To=bo.findElement(By.xpath("//ol[@id='bank']//li[@class='placeholder']"));					

@@ -23,9 +23,12 @@ public class Gmail {
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);   
 	    driver.findElement(By.xpath("//span[@class='CwaK9']")).click();
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS); 
-	    driver.findElement(By.name("password")).sendKeys("******");
+	    driver.findElement(By.name("password")).sendKeys("*********");
 	    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS); 
 	    driver.findElement(By.xpath("//span[contains(text(),'Next')]")).click();
+	    /*Actions acr=new Actions(driver);
+	    acr.moveToElement(driver.findElement(By.tagName("span"))).perform();
+	    driver.findElement(By.tagName("span")).click();*/
 	    
 	    if(driver.getTitle().equals("Google Account"))
 	    {
@@ -36,8 +39,11 @@ public class Gmail {
 	    	System.out.println("fail");
 	    	
 	    }
-	    Actions acr=new Actions(driver);
-	    acr.moveToElement(driver.findElement(By.xpath("//img[@class='gb_ua']"))).click();
+	    /*Actions acr=new Actions(driver);
+	    acr.moveToElement(driver.findElement(By.xpath("//img[@class='gb_ua']"))).perform();
+	    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	   
+	    acr.moveToElement(driver.findElement(By.tagName("span"))).click();*/
 	    
 	}
 

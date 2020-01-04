@@ -34,6 +34,7 @@ public class Windowhandles
          		
          if(!MainWindow.equalsIgnoreCase(ChildWindow))			
          {    		
+          
               
                  // Switching to Child window
                  driver.switchTo().window(ChildWindow);	
@@ -43,9 +44,9 @@ public class Windowhandles
                  driver.findElement(By.name("btnLogin")).click();			
                               
 			// Closing the Child Window.
-                 
+         
                   driver.close();		
-         }		
+         }	
      }		
      // Switching to Parent window i.e Main Window.
          driver.switchTo().window(MainWindow);				
