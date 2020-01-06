@@ -1,39 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="28928" started-at="2020-01-04T12:12:35Z" finished-at="2020-01-04T12:13:04Z">
+  <suite name="Suite" duration-ms="105821" started-at="2020-01-06T12:01:48Z" finished-at="2020-01-06T12:03:34Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="28928" started-at="2020-01-04T12:12:35Z" finished-at="2020-01-04T12:13:04Z">
-      <class name="packg.Loginreg">
-        <test-method status="PASS" signature="openbr()[pri:0, instance:packg.Loginreg@82f6ef]" name="openbr" is-config="true" duration-ms="7584" started-at="2020-01-04T17:42:50Z" finished-at="2020-01-04T17:42:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openbr -->
-        <test-method status="PASS" signature="login()[pri:0, instance:packg.Loginreg@82f6ef]" name="login" duration-ms="4257" started-at="2020-01-04T17:42:57Z" finished-at="2020-01-04T17:43:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="closebrow()[pri:0, instance:packg.Loginreg@82f6ef]" name="closebrow" is-config="true" duration-ms="2306" started-at="2020-01-04T17:43:02Z" finished-at="2020-01-04T17:43:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closebrow -->
-      </class> <!-- packg.Loginreg -->
+    <test name="chrome" duration-ms="51237" started-at="2020-01-06T12:01:48Z" finished-at="2020-01-06T12:02:39Z">
       <class name="packg.Reg">
-        <test-method status="PASS" signature="openbr()[pri:0, instance:packg.Reg@c4c815]" name="openbr" is-config="true" duration-ms="7737" started-at="2020-01-04T17:42:35Z" finished-at="2020-01-04T17:42:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openbr -->
-        <test-method status="PASS" signature="Tc1_2()[pri:0, instance:packg.Reg@c4c815]" name="Tc1_2" duration-ms="4948" started-at="2020-01-04T17:42:43Z" finished-at="2020-01-04T17:42:48Z">
+        <test-method status="PASS" signature="Tc1_2()[pri:0, instance:packg.Reg@c0edeb]" name="Tc1_2" duration-ms="17366" started-at="2020-01-06T17:32:16Z" finished-at="2020-01-06T17:32:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc1_2 -->
-        <test-method status="PASS" signature="closebrow()[pri:0, instance:packg.Reg@c4c815]" name="closebrow" is-config="true" duration-ms="2073" started-at="2020-01-04T17:42:48Z" finished-at="2020-01-04T17:42:50Z">
+      </class> <!-- packg.Reg -->
+      <class name="packg.Cbtest">
+        <test-method status="PASS" signature="Crb(java.lang.String)[pri:0, instance:packg.Cbtest@23a2f9]" name="Crb" is-config="true" duration-ms="9719" started-at="2020-01-06T17:31:48Z" finished-at="2020-01-06T17:31:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gg]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closebrow -->
+        </test-method> <!-- Crb -->
+        <test-method status="PASS" signature="Crb(java.lang.String)[pri:0, instance:packg.Reg@c0edeb]" name="Crb" is-config="true" duration-ms="11339" started-at="2020-01-06T17:31:58Z" finished-at="2020-01-06T17:32:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Crb -->
+        <test-method status="PASS" signature="login()[pri:0, instance:packg.Cbtest@23a2f9]" name="login" duration-ms="6512" started-at="2020-01-06T17:32:09Z" finished-at="2020-01-06T17:32:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clos()[pri:0, instance:packg.Cbtest@23a2f9]" name="clos" is-config="true" duration-ms="2191" started-at="2020-01-06T17:32:33Z" finished-at="2020-01-06T17:32:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clos -->
+        <test-method status="PASS" signature="clos()[pri:0, instance:packg.Reg@c0edeb]" name="clos" is-config="true" duration-ms="4093" started-at="2020-01-06T17:32:35Z" finished-at="2020-01-06T17:32:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clos -->
+      </class> <!-- packg.Cbtest -->
+    </test> <!-- chrome -->
+    <test name="Test" duration-ms="105805" started-at="2020-01-06T12:01:48Z" finished-at="2020-01-06T12:03:34Z">
+      <class name="packg.Reg">
+        <test-method status="PASS" signature="Tc1_2()[pri:0, instance:packg.Reg@16d4b5c]" name="Tc1_2" duration-ms="17049" started-at="2020-01-06T17:32:50Z" finished-at="2020-01-06T17:33:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc1_2 -->
       </class> <!-- packg.Reg -->
+      <class name="packg.Cbtest">
+        <test-method status="PASS" signature="Crb(java.lang.String)[pri:0, instance:packg.Cbtest@f5e5e3]" name="Crb" is-config="true" duration-ms="19738" started-at="2020-01-06T17:31:48Z" finished-at="2020-01-06T17:32:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ff]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Crb -->
+        <test-method status="PASS" signature="Crb(java.lang.String)[pri:0, instance:packg.Reg@16d4b5c]" name="Crb" is-config="true" duration-ms="23849" started-at="2020-01-06T17:32:08Z" finished-at="2020-01-06T17:32:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ff]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Crb -->
+        <test-method status="PASS" signature="login()[pri:0, instance:packg.Cbtest@f5e5e3]" name="login" duration-ms="18432" started-at="2020-01-06T17:32:32Z" finished-at="2020-01-06T17:32:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clos()[pri:0, instance:packg.Cbtest@f5e5e3]" name="clos" is-config="true" duration-ms="13649" started-at="2020-01-06T17:33:07Z" finished-at="2020-01-06T17:33:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clos -->
+        <test-method status="PASS" signature="clos()[pri:0, instance:packg.Reg@16d4b5c]" name="clos" is-config="true" duration-ms="13088" started-at="2020-01-06T17:33:21Z" finished-at="2020-01-06T17:33:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clos -->
+      </class> <!-- packg.Cbtest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

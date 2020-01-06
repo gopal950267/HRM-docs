@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="packg.Reg">
+      <class name="packg.Cbtest">
         <methods>
-          <include name="Tc1_2"/>
-          <include name="openbr"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- packg.Reg -->
+      </class> <!-- packg.Cbtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

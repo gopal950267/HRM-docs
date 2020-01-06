@@ -5,31 +5,48 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Loginreg
+public class Cbtest 
 {
 	String bpath="http://demo.guru99.com/insurance/v1/index.php";
 	WebDriver driver;
-	//to click on login button
- @BeforeMethod
-	public void openbr() throws InterruptedException
- {
- 	System.setProperty("webdriver.chrome.driver","C:\\Users\\QAPLANET1\\Downloads\\jarfiles\\chromedriver.exe");
-	driver= new ChromeDriver();
-    driver.get(bpath);
-	driver.manage().window().maximize();
-	Assert.assertEquals(driver.getTitle(),"Insurance Broker System - Login");
+	
+	@BeforeTest
+	@Parameters("browser")
+	public void Crb(String br)
+	{
+	if(br.equalsIgnoreCase("ff"))
+	{
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\QAPLANET1\\Downloads\\jarfiles\\geckodriver.exe");
+		driver= new FirefoxDriver();
+	    driver.get(bpath);
 	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
+	System.out.println("running with fire");
+			
 	}
- @AfterMethod
- public void closebrow()
- {
- 	driver.close();
- }	
+	else if(br.equalsIgnoreCase("gg"))	
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\QAPLANET1\\Downloads\\jarfiles\\chromedriver.exe");
+		driver= new ChromeDriver();
+	    driver.get(bpath);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		System.out.println("running with gooogle");
+	}
+	}
+@AfterTest
+public void clos()
+{
+	driver.close();
+}
  @Test
  void login()
  {
@@ -43,12 +60,5 @@ public class Loginreg
 		    driver.findElement(By.xpath("//input[@class='btn btn-danger']")).click();
 			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
  }
- /*<test name="Test">
- <parameters name="browser" value="gg">
-
-   <classes>
-     <class name="package1.Cross"/>
-   </classes>
- </test> <!-- Test -->
- */
+ 
 }

@@ -1,0 +1,11 @@
+<suite name="Suite">
+  <test name="Test">
+ <parameter name="browser" value="ff"/>
+    <classes>
+     
+      <class name="packg.Cbtest"/>
+      <class name="packg.Reg"/>
+	  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

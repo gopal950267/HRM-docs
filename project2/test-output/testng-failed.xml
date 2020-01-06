@@ -3,20 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="package2.Admin">
+      <class name="package1.CBtest">
         <methods>
-          <include name="Tc2_1"/>
-          <include name="Tc2_6"/>
-          <include name="Tc2_3"/>
-          <include name="login"/>
-          <include name="Tc2_2"/>
-          <include name="Tc2_9"/>
-          <include name="Tc2_8"/>
-          <include name="Tc2_5"/>
-          <include name="Tc2_7"/>
-          <include name="Tc2_4"/>
+          <include name="Tc1_1"/>
+          <include name="Tc1_2"/>
         </methods>
-      </class> <!-- package2.Admin -->
+      </class> <!-- package1.CBtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
