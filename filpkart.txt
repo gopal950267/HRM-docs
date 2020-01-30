@@ -1,0 +1,53 @@
+public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\apache jar files\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com/");
+		
+		driver.findElement(By.xpath("//input[@class='_2zrpKA _1dBPDZ']")).sendKeys("9550755571");
+		driver.findElement(By.xpath("//input[@class='_2zrpKA _3v41xv _1dBPDZ']")).sendKeys("Sagar@123");
+		driver.findElement(By.xpath("//button[@class='_2AkmmA _1LctnI _7UHT_c']//span[contains(text(),'Login')]")).click();
+Thread.sleep(3000);
+Actions acr=new Actions(driver);
+acr.moveToElement(driver.findElement(By.xpath("//span[contains(text(),'Electronics')]"))).perform();
+driver.findElement(By.xpath("//span[contains(text(),'Electronics')]")).click();
+
+Thread.sleep(3000);
+acr.moveToElement(driver.findElement(By.xpath("//li[@class='_1KCOnI _3ZgIXy']//a[contains(text(),'OPPO')]"))).perform();
+driver.findElement(By.xpath("//li[@class='_1KCOnI _3ZgIXy']//a[contains(text(),'OPPO')]")).click();
+//search 
+driver.findElement(By.name("q")).click();
+driver.findElement(By.name("q")).sendKeys("OPPO A7 (Glaring Gold, 64 GB)  (3 GB RAM)");
+driver.findElement(By.xpath("//button[@type='submit']")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//div[text()='?12,990']")).click();
+
+//window handles
+String	windowhandle=driver.getWindowHandle();
+System.out.println(windowhandle);
+
+Set<String> wn=driver.getWindowHandles();
+System.out.println(wn);
+
+Iterator<String> ss=wn.iterator();
+while(ss.hasNext())
+{
+	 String childwindow=ss.next();
+	 if(!windowhandle.equalsIgnoreCase(childwindow))
+	 {                                                                                                                                                                                                                                                                  
+		 driver.switchTo().window(childwindow);
+		 System.out.println(driver.switchTo().window(childwindow).getTitle());
+	
+		 Thread.sleep(3000);
+		 driver.switchTo().window(childwindow);
+		//buy code
+		 Thread.sleep(3000);	 
+		 driver.findElement(By.xpath("//button[@class='_2AkmmA _2Npkh4 _2kuvG8 _7UHT_c']")).click();
+		 Thread.sleep(3000);	
+	
+driver.findElement(By.xpath("//body/div[@id='container']/div/div[@class='_1Ua1Gl']/div[@class='row _2e3-6j']/div[@class='_3B4tat']/div[1]/div[1]/div[1]/button[1]")).click();
+Thread.sleep(3000);	
+driver.findElement(By.xpath("//span[contains(text(),'Continue Checkout')]")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//button[@class='FoDyGO']")).click();
+driver.findElement(By.xpath("//button[@class='_2AkmmA _1KqHFH _1eFTEo']")).click();
